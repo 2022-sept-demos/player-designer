@@ -11,6 +11,7 @@ const playerAvatar = document.getElementById('player-avatar');
 const nameInput = document.getElementById('name-input');
 const avatarSelect = document.getElementById('avatar-select');
 const themeSelect = document.getElementById('theme-select');
+const skillsList = document.getElementById('skills-list');
 
 // L: `let` state
 /* State */
@@ -18,6 +19,7 @@ let player = {
     name: 'Sporty',
     avatar: 'turtle',
     theme: 'ocean',
+    skills: [],
 };
 
 // E: Events on elements
@@ -48,5 +50,17 @@ function displayPlayer() {
     playerAvatar.alt = player.avatar;
 }
 
+function displaySkills() {
+    // clear the list:
+    skillsList.innerHTML = '';
+
+    for (let skill of player.skills) {
+        const li = document.createElement('li');
+        li.textContent = skill;
+        skillsList.append(li);
+    }
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayPlayer();
+displaySkills();
