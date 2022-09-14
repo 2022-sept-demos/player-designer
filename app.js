@@ -8,17 +8,36 @@
 const playerArticle = document.getElementById('player-article');
 const playerHeader = document.getElementById('player-header');
 const playerAvatar = document.getElementById('player-avatar');
+const nameInput = document.getElementById('name-input');
+const avatarSelect = document.getElementById('avatar-select');
+const themeSelect = document.getElementById('theme-select');
 
 // L: `let` state
 /* State */
 let player = {
-    name: 'sporty',
+    name: 'Sporty',
     avatar: 'turtle',
     theme: 'ocean',
 };
 
 // E: Events on elements
 /* Events */
+nameInput.addEventListener('input', () => {
+    // change the player.name property
+    player.name = nameInput.value;
+    // redisplay
+    displayPlayer();
+});
+
+avatarSelect.addEventListener('change', () => {
+    player.avatar = avatarSelect.value;
+    displayPlayer();
+});
+
+themeSelect.addEventListener('change', () => {
+    player.theme = themeSelect.value;
+    displayPlayer();
+});
 
 // D: Display from state
 /* Display Functions */
