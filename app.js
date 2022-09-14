@@ -12,6 +12,8 @@ const nameInput = document.getElementById('name-input');
 const avatarSelect = document.getElementById('avatar-select');
 const themeSelect = document.getElementById('theme-select');
 const skillsList = document.getElementById('skills-list');
+const skillInput = document.getElementById('skill-input');
+const addSkillButton = document.getElementById('add-skill-button');
 
 // L: `let` state
 /* State */
@@ -39,6 +41,17 @@ avatarSelect.addEventListener('change', () => {
 themeSelect.addEventListener('change', () => {
     player.theme = themeSelect.value;
     displayPlayer();
+});
+
+addSkillButton.addEventListener('click', () => {
+    // get the skill from the input
+    const skill = skillInput.value;
+    // add the skill to the player.skills array
+    player.skills.push(skill);
+    // redisplay the skills
+    displaySkills();
+    // reset the skill input
+    skillInput.value = '';
 });
 
 // D: Display from state
