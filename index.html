@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- title and favicon -->
-    <title>Web App</title>
+    <title>Player Designer</title>
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
     <!-- js -->
@@ -20,18 +20,62 @@
     <!-- css -->
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/player.css" />
     <!-- add link for page specific css -->
 
 </head>
 
 <body>
     <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
+        <img class="logo" src="assets/characters/hero.png" alt="logo">
+        <h1>Player Designer</h1>
     </header>
 
     <main>
+        <section class="designer">
+            <label>
+                Name
+                <input id="name-input" value="Name">
+            </label>
 
+            <label>
+                Avatar
+                <select id="avatar-select">
+                    <option value="turtle">Turtle</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="thor">Thor</option>
+                    <option value="skeleton">Skeleton</option>
+                    <option value="ninja">Ninja</option>
+                    <option value="hero">Hero</option>
+                    <option value="princess">Princess</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="devil">Devil</option>
+                    <option value="flat-top">Flat Top</option>
+                </select>
+            </label>
+
+            <label>
+                Theme
+                <select id="theme-select">
+                    <option value="space">Space</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="forest">Forest</option>
+                    <option value="mountain">Mountain</option>
+                </select>
+            </label>
+
+            <label>
+                Add Skill
+                <div class="add-skill">
+                    <input id="skill-input">
+                    <button id="add-skill-button">+</button>
+                </div>
+            </label>
+        </section>
+
+        <article class="forest">
+            player
+        </article>
     </main>
 
 </body>

@@ -1,0 +1,63 @@
+main {
+    display: grid;
+    grid-template-columns: 200px 400px;
+    gap: 30px;
+    align-items: start;
+}
+
+.designer {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: grid;
+    font-size: 0.8em;
+    gap: 2px;
+}
+
+input,
+select,
+button {
+    height: 25px;
+}
+
+.add-skill {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+article {
+}
+
+.forest {
+    background: #cfb590;
+    color: #49281f;
+    border: 3px solid #758918;
+    font-family: 'Gwendolyn';
+    font-size: 1.4rem;
+}
+
+.space {
+    background: #240047;
+    color: #40ffdc;
+    border: 3px solid #00a9d4;
+    font-family: 'Concert One';
+    font-size: 1rem;
+}
+
+.mountain {
+    background: #876b53;
+    color: #eee4a9;
+    border: 3px solid #fbcac5;
+    font-family: 'Space Grotesk';
+    font-size: 0.9rem;
+}
+
+.ocean {
+    background: #e9f2f9;
+    color: #1b325f;
+    border: 3px solid #3a89c9;
+    font-family: 'Lato';
+    font-size: 0.9rem;
+}
